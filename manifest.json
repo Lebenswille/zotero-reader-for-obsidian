@@ -1,0 +1,11 @@
+{
+    "id": "zotero-reader-for-obsidian",
+    "name": "Zotero Reader for Obsidian",
+    "minAppVersion": "1.8.10",
+    "description": "A Zotero reader plugin for Obsidian",
+    "author": "Lebenswille",
+    "authorUrl": "https://github.com/Lebenswille/",
+    "fundingUrl": "https://buymeacoffee.com/duanxianpi",
+    "isDesktopOnly": false,
+    "version": "1.0.0"
+}

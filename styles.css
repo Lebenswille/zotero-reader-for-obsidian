@@ -1,0 +1,125 @@
+.loader-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 10%;
+}
+
+.zotero-loader-icon {
+	width: 30% !important;
+	height: 30% !important;
+}
+
+.loader-outline {
+	fill: none;
+	stroke: var(--interactive-accent);
+	opacity: 0.4;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 2px;
+}
+
+/* animations */
+.loader-animation {
+	fill: none;
+	stroke: var(--interactive-accent);
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 0.5 0.5;
+	stroke-width: 3px;
+	animation: draw-line 2s linear infinite;
+	filter: drop-shadow(0 0 2px var(--interactive-accent));
+}
+
+@keyframes draw-line {
+	0% {
+		stroke-dashoffset: 1;
+	}
+	50% {
+		stroke-dashoffset: 0.5;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+.error-message {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.cm-ozrp-anno-comment {
+	font-size: var(--font-smallest);
+	color: var(--code-comment);
+}
+
+.is-live-preview .cm-ozrp-anno-json-line:not(.cm-active) {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.is-live-preview .cm-ozrp-anno-json-line:not(.cm-active)::after {
+	content: "...";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: var(--background-primary);
+	color: var(--code-comment);
+	font-size: var(--font-smallest);
+	text-align: end;
+	padding-left: 5px;
+}
+
+.callout[data-callout^="ozrp"][data-callout$="yellow"] {
+	--callout-color: var(--color-yellow-rgb);
+}
+
+.callout[data-callout^="ozrp"][data-callout$="red"] {
+	--callout-color: var(--color-red-rgb);
+}
+
+.callout[data-callout^="ozrp"][data-callout$="green"] {
+	--callout-color: var(--color-green-rgb);
+}
+
+.callout[data-callout^="ozrp"][data-callout$="blue"] {
+	--callout-color: var(--color-blue-rgb);
+}
+
+.callout[data-callout^="ozrp"][data-callout$="purple"] {
+	--callout-color: var(--color-purple-rgb);
+}
+
+.callout[data-callout^="ozrp"][data-callout$="magenta"] {
+	--callout-color: var(--color-pink-rgb);
+}
+
+.callout[data-callout^="ozrp"][data-callout$="orange"] {
+	--callout-color: var(--color-orange-rgb);
+}
+
+.callout[data-callout^="ozrp"][data-callout$="gray"] {
+	--callout-color: var(--callout-quote);
+}
+
+.callout[data-callout^="ozrp-highlight"] {
+	--callout-icon: zotero-highlight;
+}
+
+.callout[data-callout^="ozrp-underline"] {
+	--callout-icon: zotero-underline;
+}
+
+.callout[data-callout^="ozrp-text"] {
+	--callout-icon: zotero-text;
+}
+
+.callout[data-callout^="ozrp-note"] {
+	--callout-icon: zotero-note;
+}
