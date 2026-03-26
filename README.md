@@ -1,5 +1,7 @@
 # Zotero Reader for Obsidian
 
+[English README](./README.en.md)
+
 一个在 Obsidian 中阅读和标注 PDF / EPUB / HTML 的插件。
 
 这个项目基于 [duanxianpi/obsidian-zotero-reader-plugin](https://github.com/duanxianpi/obsidian-zotero-reader-plugin) 修改而来。原项目已经不再继续维护，我在此基础上修复了标注存储过于脆弱的问题，把标注相关元数据从笔记正文中拆出来独立保存，并补了一些同步与细节修正。
