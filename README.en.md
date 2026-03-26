@@ -1,5 +1,7 @@
 # Zotero Reader for Obsidian
 
+[中文说明](./README.zh-CN.md)
+
 An Obsidian plugin for reading and annotating PDF, EPUB, and HTML documents.
 
 This project is based on [duanxianpi/obsidian-zotero-reader-plugin](https://github.com/duanxianpi/obsidian-zotero-reader-plugin). The original project is no longer actively maintained. This fork focuses on making annotation storage more robust by moving annotation-related metadata out of the note body, then adding synchronization fixes and a few quality-of-life improvements on top.

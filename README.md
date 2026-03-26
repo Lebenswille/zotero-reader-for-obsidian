@@ -1,25 +1,25 @@
 # Zotero Reader for Obsidian
 
-[English README](./README.en.md)
+[中文说明](./README.zh-CN.md)
 
-一个在 Obsidian 中阅读和标注 PDF / EPUB / HTML 的插件。
+An Obsidian plugin for reading and annotating PDF, EPUB, and HTML documents.
 
-这个项目基于 [duanxianpi/obsidian-zotero-reader-plugin](https://github.com/duanxianpi/obsidian-zotero-reader-plugin) 修改而来。原项目已经不再继续维护，我在此基础上修复了标注存储过于脆弱的问题，把标注相关元数据从笔记正文中拆出来独立保存，并补了一些同步与细节修正。
+This project is based on [duanxianpi/obsidian-zotero-reader-plugin](https://github.com/duanxianpi/obsidian-zotero-reader-plugin). The original project is no longer actively maintained. This fork focuses on making annotation storage more robust by moving annotation-related metadata out of the note body, then adding synchronization fixes and a few quality-of-life improvements on top.
 
-## 安装
+## Installation
 
-手动安装：
+Manual installation:
 
-1. 下载本仓库内容。
-2. 放入你的 Obsidian 仓库目录：
+1. Download the contents of this repository.
+2. Place them in your Obsidian vault under:
    `.obsidian/plugins/zotero-reader-for-obsidian`
-3. 重新加载 Obsidian，并启用本插件。
+3. Reload Obsidian and enable the plugin.
 
-## 基本使用
+## How It Works
 
-这个插件不是直接对 PDF / EPUB / HTML 文件本身操作，而是通过一个 Markdown 笔记作为入口。这个笔记需要在 frontmatter 中提供 `source` 字段。
+The plugin does not work on a PDF, EPUB, or HTML file directly. Instead, it uses a Markdown note as the entry point. That note must contain a `source` field in its frontmatter.
 
-最简单的例子：
+Minimal example:
 
 ```md
 ---
@@ -27,34 +27,34 @@ source: Papers/MyPaper.pdf
 ---
 ```
 
-`source` 可以是：
+`source` can be:
 
-- Vault 内文件路径
-- Wikilink
-- Markdown 链接
-- `http://` 或 `https://` URL
+- A file path inside the vault
+- A wikilink
+- A Markdown link
+- An `http://` or `https://` URL
 
-使用流程：
+Typical workflow:
 
-1. 新建一个 Markdown 笔记。
-2. 在 frontmatter 中填写 `source`。
-3. 打开这个笔记，并用插件的按钮进入 Reader。
-4. 在 Reader 中阅读、标注。
-5. 标注内容会写回笔记，并带有可跳回 Reader 的链接。
+1. Create a Markdown note.
+2. Add `source` in the frontmatter.
+3. Open the note and enter Reader mode with the plugin button.
+4. Read and annotate in the Reader.
+5. Annotation content is written back to the note together with links that jump back to the corresponding location in the Reader.
 
-## 当前版本的特点
+## What This Version Improves
 
-- 标注正文会写回笔记，方便阅读和整理。
-- 标注元数据与阅读状态独立保存，不再强依赖笔记正文格式。
-- 删除笔记中的标注 callout 时，对应标注会同步清理。
-- 点击笔记中的标注链接，可以回到对应阅读位置。
+- Annotation text is written back to the note for easier reading and organization.
+- Annotation metadata and reader state are stored separately, so they no longer depend heavily on fragile note-body formatting.
+- Removing an annotation callout from the note also cleans up the corresponding stored metadata.
+- Clicking an annotation link in the note jumps back to the related reading position.
 
-## 注意
+## Notes
 
-- `source` 是识别 Reader Note 的关键字段，不要删除。
-- 你可以自由编辑自己的笔记正文。
-- 如果删除标注对应的 callout / 链接，插件会把对应标注视为已移除。
+- The `source` field is required for a note to be recognized as a Reader note.
+- You can edit the note body freely.
+- If you remove an annotation callout or its link from the note, the plugin will treat that annotation as removed and clean up the related stored metadata.
 
-## 致谢
+## Acknowledgements
 
-感谢原作者 [duanxianpi](https://github.com/duanxianpi) 提供项目基础。
+Thanks to the original author [duanxianpi](https://github.com/duanxianpi) for the foundation of this project.
