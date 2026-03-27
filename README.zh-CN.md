@@ -1,3 +1,5 @@
+> 说明：这个插件是 vibe coded 的。
+
 # Zotero Reader for Obsidian
 
 [English README](./README.md)

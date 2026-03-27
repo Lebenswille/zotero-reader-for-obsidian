@@ -1,3 +1,5 @@
+> Note: This plugin is vibe coded.
+
 # Zotero Reader for Obsidian
 
 [中文说明](./README.zh-CN.md)
